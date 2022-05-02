@@ -1,7 +1,7 @@
-import AquariumHeader from "./components/AquariumHeader/AquariumHeader";
+import Header from "./components/Header/Header";
 
 function App() {
-  return <AquariumHeader />;
+  return <Header />;
 }
 
 export default App;
