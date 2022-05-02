@@ -1,70 +1,164 @@
-# Getting Started with Create React App
+# General Data
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- isCatched → true / false
+  - Indicates if fish is catched (true) or not (false)
+-
 
-## Available Scripts
+# #APP
 
-In the project directory, you can run:
+- Render a Header component.
+- Render the actual ROUTE.
+- Render a Footer component.
 
-### `npm start`
+# #Header
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Render a h1 with "Fishypedia" or a "go back" button depending of the ACTUAL ROUTE.
+- Render a h2 text with the GIVEN sub-page name.
+- Render a fish icon in DESKTOP view.
+- Render a button component GIVING the text “Aquarium” and it’s action in DESKTOP view.
+- Render a button component GIVING the text “Fish Tank” and it’s action in DESKTOP view.
+- Render a filter component in DESKTOP view.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## ##Desktop Filter
 
-### `npm test`
+- Show a datalist when user clicks on it.
+- Refresh list STATUS (main or local list)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# #Aquarium Page
 
-### `npm run build`
+- REQUEST a list from Acnhapi API.
+- Render a list with as many fishes in the API list.
+- Render a button component GIVING the text “Load more” and it’s action.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## ##Fish
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Render a fish component.
+- Show an h3 with the RECEIVED name.
+- Show a label with a calendar icon and the RECEIVED spawn months.
+- Show a label with a clock icon and the RECEIVED spawn time.
+- Show a label with the RECEIVED spawn location.
+- Show a label with the RECEIVED rarity.
+- Render a button component GIVING the text “Catch it!” and it’s action.
+- When user clicks on it, it CHANGES the view to FishDetail
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# #FishDetail Page
 
-### `npm run eject`
+- Render a container with the RECEIVED image
+- Render a container with:
+  - An h3 with the RECEIVED name,
+  - A text with a globe icon and “Northern hemisphere” text,
+  - A label with a calendar icon and the RECEIVED spawn months,
+  - A text with a globe icon and “Southern hemisphere” text,
+  - A label with a calendar icon and the RECEIVED spawn month.
+- Render a container with:
+  - The “money bag” icon.
+  - An h4 with the text “Price”.
+  - A text with “C.J. Price (50% MORE)”.
+  - A label with a star icon and the RECEIVED price.
+  - A text with “Box price (20% LESS)”.
+  - A label with a star icon and the RECEIVED price.
+- Render a container with:
+  - The Blathers icon
+  - An h4 with the text “Blathers has this to tell about the” and the RECEIVED fishname.
+  - A p with the RECEIVED description text.
+- Render a button component GIVING the text “Catch it!” and it’s action.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# #Footer
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Render a home icon button GIVING the link to the main page Aquarium action or render a button GIVING the text “Previous” and it’s action depending on Mobile or Desktop view.
+- Render a fish icon button GIVING the link to the fish-tank page or render a button GIVING the text “Next” and it’s action depending on Mobile or Desktop view.
+- Render a span with text “Showing” and the RECEIVED numbers.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+# #Fish Tank Page
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- REQUEST a list from the local API.
+- Render a list as many fishes in the local API list.
+- _Render + icon to add fish_
 
-## Learn More
+## ##FishTank Fish
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Render a fish component.
+- Show an h3 with the RECEIVED name.
+- Show a label with a calendar icon and the RECEIVED spawn months.
+- Show a label with a clock icon and the RECEIVED spawn time.
+- Show a label with the RECEIVED spawn location.
+- Show a label with the RECEIVED rarity.
+- Render a button component GIVING the text “Release” and it’s action.
+- Render a button component GIVING the text “Edit” and it’s action.
+- When user clicks on it, it CHANGES the view to FishTankDetail
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# #FishTank Detail Page
 
-### Code Splitting
+- Render a container with the RECEIVED image
+- Render a container with:
+  - An h3 with the RECEIVED name,
+  - A text with a globe icon and “Northern hemisphere” text,
+  - A label with a calendar icon and the RECEIVED spawn months,
+  - A text with a globe icon and “Southern hemisphere” text,
+  - A label with a calendar icon and the RECEIVED spawn month.
+- Render a container with:
+  - The “money bag” icon.
+  - An h4 with the text “Price”.
+  - A text with “C.J. Price (50% MORE)”.
+  - A label with a star icon and the RECEIVED price.
+  - A text with “Box price (20% LESS)”.
+  - A label with a star icon and the RECEIVED price.
+- Render a container with:
+  - The Blathers icon
+  - An h4 with the text “Blathers has this to tell about the” and the RECEIVED fishname.
+  - A p with the RECEIVED description text.
+- Render a button component GIVING the text “Release” and it’s action.
+- Render a button component GIVING the text “Edit” and it’s action.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+# ##Button addButton
 
-### Analyzing the Bundle Size
+- Render a button Component
+- Render a received text “Catch it !”
+- Request action to PUT item into the fish tank
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+# ##Button deleteButton
 
-### Making a Progressive Web App
+- Render a button Component
+- Render a received text “release ”
+- Request action to delete/release item back into the main aquarium
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+# ##Button EditButton
 
-### Advanced Configuration
+- Render a button Component
+- Render a received text “Edit”
+- Request action to edit fish item
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+# ##Button searchButton
 
-### Deployment
+- Render a button Component
+- Render a received text “Search”
+- Request action filter public API
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+# ##Button error messageButton
 
-### `npm run build` fails to minify
+- Render a button Component
+- Render a received text “Back to aquarium”
+- Renders button link to main page aquarium
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# #Modal CreateFishMessage component
+
+- Render a toast advising of the creation of a new fish
+- Render button with the received text “Back to the aquarium” and received action “delete”
+- Render button with the received text “See the fish tank” and received action “add”
+
+# #Modal ReleaseFishMessage component
+
+- Render a toast advising of inminent fish release
+- Render button with the received text “I want to keep it” and received action “add”
+- Render button with the received text “Sea ya, little fella” and received action “delete”
+
+# #Modal CatchedFishMessage component
+
+- Render a toast advising of fish catched
+- Render button with the received text “see the fishTank” and received action “add”
+- Render button with the received text “Back to aquarium” and received action “delete”
+
+# #Modal ErrorMessage component
+
+- Render a “toast” advising the user of temporal unavailability
+- Render a errorMessageButton
