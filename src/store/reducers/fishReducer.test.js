@@ -1,4 +1,4 @@
-import fishesReducer from "./FishesReducer";
+import fishesReducer from "./fishesReducer";
 
 describe("Given the fishesReducer", () => {
   describe("When it receive a group of two fishes and action loadFishes", () => {
