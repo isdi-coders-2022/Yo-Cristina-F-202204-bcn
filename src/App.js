@@ -1,7 +1,7 @@
-import Button from "./components/Button/Button";
+import Header from "./components/Header/Header";
 
 function App() {
-  return <Button styleType={"primary"} text="someText" />;
+  return <Header />;
 }
 
 export default App;
