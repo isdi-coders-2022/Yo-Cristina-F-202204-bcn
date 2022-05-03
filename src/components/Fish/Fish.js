@@ -15,11 +15,11 @@ const Fish = ({ fish, toDetail }) => {
       />
       <ul>
         <li>
-          <i class="fas fa-calendar-alt"></i>
+          <i className="fas fa-calendar-alt"></i>
           <span>{fish.availability["month-northern"]}</span>
         </li>
         <li>
-          <i class="fas fa-clock"></i>
+          <i className="fas fa-clock"></i>
           <span>
             {fish.availability.isAllDay ? "All day" : fish.availability.time}
           </span>

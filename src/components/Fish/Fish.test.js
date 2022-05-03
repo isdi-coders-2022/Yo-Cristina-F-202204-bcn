@@ -1,5 +1,5 @@
 import Fish from "./Fish";
-import { render, screen, debug } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 
 describe("Given a Fish component.", () => {
   const fish = {
