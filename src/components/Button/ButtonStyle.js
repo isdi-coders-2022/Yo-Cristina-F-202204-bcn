@@ -1,16 +1,18 @@
 import styled from "styled-components";
 import theme from "../../theme/theme";
 
-export const ButtonStyle = styled.div`
+export const ButtonStyle = styled.button`
   display: flex;
   background-color: #60bec4;
   color: #faf4ed;
+  width: 100%;
   font-size: 1.25em;
   font-weight: bold;
   flex-direction: column;
   padding: 15px;
   align-items: center;
   border-radius: 10px;
+  border: none;
   cursor: pointer;
 
   ${(props) =>
@@ -32,7 +34,4 @@ export const ButtonStyle = styled.div`
       : ""}
 `;
 
-export const Div = styled.div`
-  background-color: white;
-`;
 export default ButtonStyle;
