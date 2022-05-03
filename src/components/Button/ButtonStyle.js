@@ -13,6 +13,7 @@ export const ButtonStyle = styled.button`
   align-items: center;
   border-radius: 10px;
   border: none;
+  font-family: "Nunito", sans-serif;
   cursor: pointer;
 
   ${(props) =>
