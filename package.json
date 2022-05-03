@@ -44,7 +44,9 @@
   "jest": {
     "collectCoverageFrom": [
       "!src/index.js",
-      "!src/reportWebVitals.js"
+      "!src/reportWebVitals.js",
+      "!src/theme/GlobalStyle.js",
+      "!src/theme/theme.js"
     ]
   }
 }
