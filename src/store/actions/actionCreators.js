@@ -1,4 +1,4 @@
-import actionsTypes from "./ActionTypes";
+import actionsTypes from "./actionTypes";
 
 export const loadFishes = (fishes) => ({
   type: actionsTypes.loadFishes,
