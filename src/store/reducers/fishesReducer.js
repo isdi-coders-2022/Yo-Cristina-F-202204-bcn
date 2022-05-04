@@ -1,10 +1,10 @@
-import actionsTypes from "../actions/actionTypes";
+import actionTypes from "../actions/actionTypes";
 
 const fishesReducer = (actualFishes, action) => {
   let newFishes;
 
   switch (action.types) {
-    case actionsTypes.loadFishes:
+    case actionTypes.loadFishes:
       newFishes = [...action.fishes];
       break;
 
