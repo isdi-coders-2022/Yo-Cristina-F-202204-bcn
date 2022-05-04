@@ -7,8 +7,11 @@ function App() {
     <>
       <Header />
       <Routes>
-        <Route path="/" element={<Navigate to="/fishaquarium" />} />
-        <Route path="/fishaquarium" element={<FishAquariumListPage />} />
+        <Route path="/" element={<Navigate to="/aquariumfishlist" />} />
+        <Route
+          path="/aquariumfishlist"
+          element={<Navigate to={<FishAquariumListPage />} />}
+        />
       </Routes>
     </>
   );
