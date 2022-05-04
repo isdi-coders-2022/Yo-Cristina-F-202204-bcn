@@ -3,6 +3,7 @@ import { loadFishesActionType } from "../actions/actionTypes";
 const fishesReducer = (actualFishes, action) => {
   let newFishes;
 
+
   switch (action.type) {
     case loadFishesActionType:
       newFishes = [...action.fishes];
