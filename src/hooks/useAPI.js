@@ -6,8 +6,7 @@ const useAPI = () => {
 
   const loadFishes = useCallback(async () => {
     const response = await fetch(`${urlAPI}${endpoint.fish}`);
-    const data = await response.json();
-    return data;
+    return await response.json();
   }, [urlAPI]);
 
   return { loadFishes };
