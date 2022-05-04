@@ -13,8 +13,6 @@ const FishStyle = styled.div`
   }
 
   ul {
-    list-style: none;
-    width: 100%;
     padding: 0 20px;
   }
   li {
@@ -28,6 +26,9 @@ const FishStyle = styled.div`
     font-size: 36px;
     color: #583e3b;
     font-weight: 800;
+  }
+  .fish {
+    margin-bottom: 20px;
   }
 
   .fishContainer__monthDisplay,
