@@ -5,7 +5,7 @@ const fishesReducer = (actualFishes, action) => {
 
   switch (action.types) {
     case actionsTypes.loadFishes:
-      newFishes = [...actualFishes];
+      newFishes = [...action.fishes];
       break;
 
     default:
