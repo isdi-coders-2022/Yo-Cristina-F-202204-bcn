@@ -1,4 +1,5 @@
 import { Navigate, Route, Routes } from "react-router-dom";
+import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import FishAquariumListPage from "./pages/FishAquariumListPage/FishAquariumListPage";
 
@@ -13,6 +14,8 @@ function App() {
           element={<Navigate to={<FishAquariumListPage />} />}
         />
       </Routes>
+
+      <Footer />
     </>
   );
 }

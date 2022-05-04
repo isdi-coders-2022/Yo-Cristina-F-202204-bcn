@@ -1,12 +1,12 @@
 import { useReducer } from "react";
-import fishesReducer from "../reducers/FishesReducer";
+import fishesReducer from "../reducers/fishesReducer";
 import FishesDataContext from "./FishesDataContext";
 
 const FishesDataProvider = ({ children }) => {
-  const [fishes, dispatchFishes] = useReducer(fishesReducer, []);
+  const [fishes, dispatch] = useReducer(fishesReducer, []);
 
   return (
-    <FishesDataContext.Provider values={(fishes, dispatchFishes)}>
+    <FishesDataContext.Provider value={{ fishes, dispatch }}>
       {children}
     </FishesDataContext.Provider>
   );

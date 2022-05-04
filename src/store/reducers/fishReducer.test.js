@@ -3,7 +3,7 @@ import fishesReducer from "./fishesReducer";
 describe("Given the fishesReducer", () => {
   describe("When it receive a group of two fishes and action loadFishes", () => {
     test("Then it should return a new group equals to the given one", () => {
-      const actualFishes = [
+      const fishes = [
         {
           id: 16,
           "file-name": "freshwater_goby",
@@ -16,7 +16,7 @@ describe("Given the fishesReducer", () => {
 
       const action = {
         type: "load-fishes",
-        actualFishes,
+        fishes,
       };
 
       const expectedResult = [
@@ -30,7 +30,7 @@ describe("Given the fishesReducer", () => {
         },
       ];
 
-      const fishesLoaded = fishesReducer(actualFishes, action);
+      const fishesLoaded = fishesReducer(fishes, action);
 
       expect(fishesLoaded).toEqual(expectedResult);
     });

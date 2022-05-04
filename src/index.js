@@ -6,16 +6,19 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import GlobalStyle from "./theme/GlobalStyle";
 import theme from "./theme/theme";
+import FishesDataProvider from "./store/context/FishesDataProvider";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
+  <FishesDataProvider>
     <ThemeProvider theme={theme}>
       <GlobalStyle />
       <BrowserRouter>
         <App />
       </BrowserRouter>
     </ThemeProvider>
+  </FishesDataProvider>
   </React.StrictMode>
 );
 

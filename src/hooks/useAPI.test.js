@@ -1,4 +1,5 @@
 import { renderHook, waitFor } from "@testing-library/react";
+import FishesDataProvider from "../store/context/FishesDataProvider";
 import useAPI from "./useAPI";
 
 describe("Given the custom Hook useAPI", () => {
@@ -92,7 +93,11 @@ describe("Given the custom Hook useAPI", () => {
         },
       ];
 
-      const { result } = renderHook(() => useAPI());
+      const wrapper = ({ children }) => (
+        <FishesDataProvider>{children}</FishesDataProvider>
+      );
+
+      const { result } = renderHook(() => useAPI(), { wrapper });
       const fishes = await waitFor(() => result.current.loadFishes());
       expect(fishes).toEqual(expectFishes);
     });
