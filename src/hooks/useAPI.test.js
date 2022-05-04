@@ -94,7 +94,6 @@ describe("Given the custom Hook useAPI", () => {
 
       const { result } = renderHook(() => useAPI());
       const fishes = await waitFor(() => result.current.loadFishes());
-      console.log(fishes);
       expect(fishes).toEqual(expectFishes);
     });
   });
