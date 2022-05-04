@@ -11,6 +11,7 @@ const useAPI = () => {
     const response = await fetch(`${urlAPI}${endpoint.fish}`);
     const dataFishes = await response.json();
     dispatch(loadFishesActionCreator(dataFishes));
+    return dataFishes;
   }, [urlAPI, dispatch]);
 
   return { loadFishes };
