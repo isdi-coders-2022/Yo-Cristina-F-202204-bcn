@@ -19,6 +19,12 @@ const GlobalStyle = createGlobalStyle`
     background: linear-gradient(180deg, rgba(${theme.bluelightRgb},.95) 0%, rgba(${theme.blueDarkRgb},.95) 100%),
       url(${backgroundImage});
   }
+
+  ul {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
 `;
 
 export default GlobalStyle;
