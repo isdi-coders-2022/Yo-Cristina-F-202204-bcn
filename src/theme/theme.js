@@ -10,6 +10,7 @@ const theme = {
   brownLight: "#E6D0BE",
   brownMedium: "#DBBE9D",
   brownDark: "#583E3B",
+  brownDarkRgb: "88,62,59",
 };
 
 export default theme;
