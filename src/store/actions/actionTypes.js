@@ -1,5 +1,5 @@
-const actionsTypes = {
+const actionTypes = {
   loadFishes: "load-fishes",
 };
 
-export default actionsTypes;
+export default actionTypes;
