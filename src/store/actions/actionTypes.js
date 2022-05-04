@@ -1,5 +1,1 @@
-const actionTypes = {
-  loadFishes: "load-fishes",
-};
-
-export default actionTypes;
+export const loadFishesActionType = "load-fishes";

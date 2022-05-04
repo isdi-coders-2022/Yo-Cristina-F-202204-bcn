@@ -1,4 +1,4 @@
-import { loadFishes } from "./actionCreators";
+import { loadFishesActionCreator } from "./actionCreators";
 
 describe("Given the ActionCreators loadFishes", () => {
   describe("When it receive a group of two fishes", () => {
@@ -19,7 +19,7 @@ describe("Given the ActionCreators loadFishes", () => {
         fishes,
       };
 
-      const action = loadFishes(fishes);
+      const action = loadFishesActionCreator(fishes);
 
       expect(action).toEqual(expectedAction);
     });
