@@ -3,8 +3,8 @@ import { endpoint } from "../paths/endpoint";
 const urlAPI = process.env.REACT_APP_API_URL;
 
 export const handlers = [
-  rest.get(`${urlAPI}${endpoint.fish}`, (req, res, ctx) => {
-    return res(
+  rest.get(`${urlAPI}${endpoint.fish}`, (_req, res, ctx) =>
+    res(
       ctx.status(200),
       ctx.json([
         {
@@ -93,6 +93,6 @@ export const handlers = [
           icon_uri: "https://acnhapi.com/v1/icons/fish/2",
         },
       ])
-    );
-  }),
+    )
+  ),
 ];
