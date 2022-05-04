@@ -8,11 +8,13 @@ export const ButtonStyle = styled.button`
   width: 100%;
   font-size: 1.25em;
   font-weight: bold;
+  font-family: inherit;
   flex-direction: column;
   padding: 15px;
   align-items: center;
   border-radius: 10px;
   border: none;
+  font-family: "Nunito", sans-serif;
   cursor: pointer;
 
   ${(props) =>
