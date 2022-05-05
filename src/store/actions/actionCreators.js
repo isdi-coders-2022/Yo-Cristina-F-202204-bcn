@@ -2,17 +2,27 @@ import {
   addLocalFishesActionType,
   loadFishesActionType,
   loadLocalFishesActionType,
+  deleteLocalFishesActionType,
+  modifyLocalFishesActionType,
 } from "./actionTypes";
 
 export const loadFishesActionCreator = (fishes) => ({
   type: loadFishesActionType,
   fishes,
 });
-export const loadLocalFishesActionCreator = (fishes) => ({
+export const loadLocalFishesActionCreator = (localFishes) => ({
   type: loadLocalFishesActionType,
-  fishes,
+  localFishes,
 });
-export const addLocalFishesActionCreator = (fishes) => ({
+export const addLocalFishesActionCreator = (localFishes) => ({
   type: addLocalFishesActionType,
-  fishes,
+  localFishes,
+});
+export const deleteLocalFishesActionCreator = (localFishes) => ({
+  type: deleteLocalFishesActionType,
+  localFishes,
+});
+export const modifyLocalFishesActionCreator = (localFishes) => ({
+  type: modifyLocalFishesActionType,
+  localFishes,
 });
