@@ -1,5 +1,4 @@
 import localFishesReducer from "./localFishesReducer";
-import { loadFishesActionCreator } from "../actions/actionCreators";
 
 describe("Given a localFishesReducer", () => {
   const fishes = [
