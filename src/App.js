@@ -6,6 +6,7 @@ import FishTankListPage from "./pages/FishTankListPage/FishTankListPage";
 import styled from "styled-components";
 import theme from "./theme/theme";
 import backgroundImage from "./images/mobile-background.png";
+import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
 
 const ContainerStyle = styled.div`
   background: linear-gradient(
@@ -34,8 +35,9 @@ function App() {
       <main className="main">
         <Routes>
           <Route path="/" element={<FishAquariumListPage />} />
-          <Route path="aquarium" element={<FishAquariumListPage />} />
-          <Route path="fishtank" element={<FishTankListPage />} />
+          <Route path="Aquarium" element={<FishAquariumListPage />} />
+          <Route path="FishTank" element={<FishTankListPage />} />
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </main>
       <Footer />

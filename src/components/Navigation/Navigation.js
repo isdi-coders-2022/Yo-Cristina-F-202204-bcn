@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import theme from "../../theme/theme";
 
@@ -32,7 +33,7 @@ const MobileNavbarStyle = styled.nav`
 const Navigation = () => {
   return (
     <MobileNavbarStyle>
-      <div>
+      <NavLink to="Aquarium">
         <div className="mobile-navbar__icon-button">
           <img
             className="mobile-navbar__image--home"
@@ -41,8 +42,9 @@ const Navigation = () => {
           />
           <h6 className="mobile-navbar__tittle">Aquarium</h6>
         </div>
-      </div>
-      <div>
+      </NavLink>
+
+      <NavLink to="FishTank">
         <div className="mobile-navbar__icon-button">
           <img
             className="mobile-navbar__image--fish"
@@ -51,7 +53,7 @@ const Navigation = () => {
           />
           <h6 className="mobile-navbar__tittle">Fish Tank</h6>
         </div>
-      </div>
+      </NavLink>
     </MobileNavbarStyle>
   );
 };

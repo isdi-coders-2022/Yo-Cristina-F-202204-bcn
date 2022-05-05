@@ -1,9 +1,7 @@
-import FishTankList from "../../components/FishTankList/FishTankList";
-
 const FishTankListPage = () => {
   return (
     <>
-      <FishTankList />
+      <p>Fish list</p>
     </>
   );
 };
