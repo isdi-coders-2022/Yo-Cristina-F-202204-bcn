@@ -6,30 +6,26 @@ const MobileNavbarStyle = styled.nav`
   justify-content: space-around;
   align-items: flex-end;
 
-  .mobile-navbar {
-    &__icon-button {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
+  .mobile-navbar__icon-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-    &__image {
-      &--home {
-        width: 25px;
-      }
-      &--fish {
-        width: 35px;
-      }
-    }
+  .mobile-navbar__image--home {
+    width: 25px;
+  }
+  .mobile-navbar__image--fish {
+    width: 35px;
+  }
 
-    &__tittle {
-      margin-bottom: 0;
-      margin-top: 10px;
-      color: ${theme.brownDark};
-      font-size: 0.7em;
-      font-weight: 700;
-      text-transform: uppercase;
-    }
+  .mobile-navbar__tittle {
+    margin-bottom: 0;
+    margin-top: 10px;
+    color: ${theme.brownDark};
+    font-size: 0.7em;
+    font-weight: 700;
+    text-transform: uppercase;
   }
 `;
 
