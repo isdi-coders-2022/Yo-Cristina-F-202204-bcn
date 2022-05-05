@@ -2,6 +2,7 @@ import {
   addLocalFishesActionType,
   loadFishesActionType,
   loadLocalFishesActionType,
+  deleteLocalFishesActionType,
 } from "./actionTypes";
 
 export const loadFishesActionCreator = (fishes) => ({
@@ -14,5 +15,9 @@ export const loadLocalFishesActionCreator = (fishes) => ({
 });
 export const addLocalFishesActionCreator = (fishes) => ({
   type: addLocalFishesActionType,
+  fishes,
+});
+export const deleteLocalFishesActionCreator = (fishes) => ({
+  type: deleteLocalFishesActionType,
   fishes,
 });
