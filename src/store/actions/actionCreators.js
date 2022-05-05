@@ -26,11 +26,3 @@ export const modifyLocalFishesActionCreator = (localFishes) => ({
   type: modifyLocalFishesActionType,
   localFishes,
 });
-export const deleteLocalFishesActionCreator = (fishes) => ({
-  type: deleteLocalFishesActionType,
-  fishes,
-});
-export const modifyLocalFishesActionCreator = (fishes) => ({
-  type: modifyLocalFishesActionType,
-  fishes,
-});

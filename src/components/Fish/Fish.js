@@ -1,11 +1,14 @@
 import FishStyle from "./FishStyle";
 import Button from "../Button/Button";
+import useAPI from "../../hooks/useAPI";
 
 const capitalizeName = (name) => {
   return name.charAt(0).toUpperCase() + name.slice(1);
 };
 
 const Fish = ({ fish, toDetail }) => {
+  const { addToFishTank } = useAPI();
+
   return (
     <FishStyle>
       <ul className="fishContainer" onClick={toDetail}>
