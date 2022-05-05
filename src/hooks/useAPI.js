@@ -10,7 +10,7 @@ const useAPI = () => {
   const loadFishes = useCallback(async () => {
     const response = await fetch(`${urlAPI}${endpoint.fish}`);
     const dataFishes = await response.json();
-    //dispatch(loadFishesActionCreator(dataFishes));
+    dispatch(loadFishesActionCreator(dataFishes));
     return dataFishes;
   }, [urlAPI, dispatch]);
 
