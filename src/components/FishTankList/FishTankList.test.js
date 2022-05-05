@@ -1,5 +1,6 @@
 import { screen, render } from "@testing-library/react";
 import FishTankList from "./FishTankList";
+import FishesDataProvider from "../../store/context/FishesDataProvider";
 
 describe("Given the Componant FishTankList", () => {
   describe("When given invoked with an array of Fishes", () => {
@@ -55,7 +56,11 @@ describe("Given the Componant FishTankList", () => {
           icon_uri: "https://acnhapi.com/v1/icons/fish/1",
         },
       ];
-      render(<FishTankList fishes={givenFishes} />);
+      render(
+        <FishesDataProvider>
+          <FishTankList fishes={givenFishes} />
+        </FishesDataProvider>
+      );
       const expectedFishContainers = screen.getAllByRole("heading");
 
       expect(expectedFishContainers.length).toBe(amountFishes);

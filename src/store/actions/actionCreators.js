@@ -10,19 +10,19 @@ export const loadFishesActionCreator = (fishes) => ({
   type: loadFishesActionType,
   fishes,
 });
-export const loadLocalFishesActionCreator = (fishes) => ({
+export const loadLocalFishesActionCreator = (localFishes) => ({
   type: loadLocalFishesActionType,
-  fishes,
+  localFishes,
 });
-export const addLocalFishesActionCreator = (fishes) => ({
+export const addLocalFishesActionCreator = (localFishes) => ({
   type: addLocalFishesActionType,
-  fishes,
+  localFishes,
 });
-export const deleteLocalFishesActionCreator = (fishes) => ({
+export const deleteLocalFishesActionCreator = (localFishes) => ({
   type: deleteLocalFishesActionType,
-  fishes,
+  localFishes,
 });
-export const modifyLocalFishesActionCreator = (fishes) => ({
+export const modifyLocalFishesActionCreator = (localFishes) => ({
   type: modifyLocalFishesActionType,
-  fishes,
+  localFishes,
 });

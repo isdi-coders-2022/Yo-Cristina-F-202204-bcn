@@ -1,5 +1,6 @@
 import Fish from "./Fish";
 import { render, screen } from "@testing-library/react";
+import FishesDataProvider from "../../store/context/FishesDataProvider";
 
 describe("Given a Fish component.", () => {
   const fish = {
@@ -25,7 +26,11 @@ describe("Given a Fish component.", () => {
     test("Then it should render a heading with 'Freshwater goby on it'", () => {
       const expectedName = "Freshwater goby";
 
-      render(<Fish fish={fish} />);
+      render(
+        <FishesDataProvider>
+          <Fish fish={fish} />
+        </FishesDataProvider>
+      );
       const expectedHeading = screen.getByRole("heading").textContent;
 
       expect(expectedHeading).toEqual(expectedName);

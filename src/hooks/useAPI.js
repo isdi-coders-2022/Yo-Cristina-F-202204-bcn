@@ -25,7 +25,17 @@ const useAPI = () => {
     return dataFishes;
   }, [localDispatch, localUrlAPI]);
 
-  return { loadFishes, loadLocalFishes };
+  const addToFishTank = async (fish) => {
+    await fetch(`${localUrlAPI}${endpoint.fish}`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(fish),
+    });
+  };
+
+  return { loadFishes, loadLocalFishes, addToFishTank };
 };
 
 export default useAPI;
