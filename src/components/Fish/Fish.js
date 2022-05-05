@@ -50,7 +50,7 @@ const Fish = ({ fish, toDetail }) => {
           </div>
         </li>
         <li>
-          <Button text="Catch it!" />
+          <Button text="Catch it!" action={() => addToFishTank(fish)} />
         </li>
       </ul>
     </FishStyle>

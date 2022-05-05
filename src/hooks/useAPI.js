@@ -2,7 +2,6 @@ import { endpoint } from "../paths/endpoint";
 import { useCallback, useContext } from "react";
 import FishesDataContext from "../store/context/FishesDataContext";
 import {
-  addLocalFishesActionCreator,
   loadFishesActionCreator,
   loadLocalFishesActionCreator,
 } from "../store/actions/actionCreators";
