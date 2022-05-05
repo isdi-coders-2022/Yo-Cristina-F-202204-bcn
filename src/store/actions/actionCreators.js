@@ -1,4 +1,8 @@
-import { loadFishesActionType, loadLocalFishesActionType } from "./actionTypes";
+import {
+  addLocalFishesActionType,
+  loadFishesActionType,
+  loadLocalFishesActionType,
+} from "./actionTypes";
 
 export const loadFishesActionCreator = (fishes) => ({
   type: loadFishesActionType,
@@ -6,5 +10,9 @@ export const loadFishesActionCreator = (fishes) => ({
 });
 export const loadLocalFishesActionCreator = (fishes) => ({
   type: loadLocalFishesActionType,
+  fishes,
+});
+export const addLocalFishesActionCreator = (fishes) => ({
+  type: addLocalFishesActionType,
   fishes,
 });
