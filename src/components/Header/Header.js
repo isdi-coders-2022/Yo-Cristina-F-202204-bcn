@@ -1,10 +1,12 @@
 import styled from "styled-components";
+import theme from "../../theme/theme";
 
 const HeaderStyle = styled.ul`
-  background: #91d9d9;
+  box-shadow: 0px -1px 50px 0px rgba(${theme.brownDarkRgb}, 0.4);
+  background: ${theme.blueDark};
   font-family: inherit;
   height: 88px;
-  color: #583e3b;
+  color: ${theme.white};
   list-style-type: none;
   display: flex;
   justify-content: space-between;
