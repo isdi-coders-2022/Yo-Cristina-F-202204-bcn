@@ -5,12 +5,12 @@ import { loadFishesActionCreator } from "../store/actions/actionCreators";
 
 const useAPI = () => {
   const urlAPI = process.env.REACT_APP_API_URL;
-  const { dispatch } = useContext(FishesDataContext);
+  //const { dispatch } = useContext(FishesDataContext);
 
   const loadFishes = useCallback(async () => {
     const response = await fetch(`${urlAPI}${endpoint.fish}`);
     const dataFishes = await response.json();
-    dispatch(loadFishesActionCreator(dataFishes));
+    //dispatch(loadFishesActionCreator(dataFishes));
     return dataFishes;
   }, [urlAPI, dispatch]);
 
