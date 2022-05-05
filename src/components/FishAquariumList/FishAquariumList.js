@@ -1,6 +1,3 @@
-import { useContext, useEffect } from "react";
-import useAPI from "../../hooks/useAPI";
-import FishesDataContext from "../../store/context/FishesDataContext";
 import Fish from "../Fish/Fish";
 import styled from "styled-components";
 
@@ -12,14 +9,7 @@ const FishListStyle = styled.ul`
   margin-bottom: 30px;
 `;
 
-const FishAquariumList = () => {
-  const { loadFishes } = useAPI();
-  const { fishes } = useContext(FishesDataContext);
-
-  useEffect(() => {
-    loadFishes();
-  }, [loadFishes]);
-
+const FishAquariumList = ({ fishes }) => {
   return (
     <>
       <FishListStyle>
