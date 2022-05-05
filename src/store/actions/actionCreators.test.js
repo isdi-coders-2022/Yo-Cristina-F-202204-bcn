@@ -84,7 +84,7 @@ describe("Given the addLocalFishesActionCreator function", () => {
 describe("Given the deleteLocalFishesActionCreator function", () => {
   describe("When invoked with a group of 2 fishes", () => {
     test("Then it should return an object with the type of property 'delete-local-fishes'", () => {
-      const fishes = [
+      const localFishes = [
         {
           id: 3,
           "file-name": "boris_fish",
@@ -96,9 +96,9 @@ describe("Given the deleteLocalFishesActionCreator function", () => {
       ];
       const expectedLocalResult = {
         type: "delete-local-fishes",
-        fishes,
+        localFishes,
       };
-      const localActionResult = deleteLocalFishesActionCreator(fishes);
+      const localActionResult = deleteLocalFishesActionCreator(localFishes);
 
       expect(localActionResult).toEqual(expectedLocalResult);
     });
@@ -108,7 +108,7 @@ describe("Given the deleteLocalFishesActionCreator function", () => {
 describe("Given the modifyFishesActionCreator function", () => {
   describe("When invoked with a group of 3 fishes", () => {
     test("Then it should return an object with the type of property 'modify-local-fishes'", () => {
-      const fishes = [
+      const localFishes = [
         {
           id: 3,
           "file-name": "boris_fish",
@@ -124,9 +124,9 @@ describe("Given the modifyFishesActionCreator function", () => {
       ];
       const expectedLocalResult = {
         type: "modify-local-fishes",
-        fishes,
+        localFishes,
       };
-      const localActionResult = modifyLocalFishesActionCreator(fishes);
+      const localActionResult = modifyLocalFishesActionCreator(localFishes);
 
       expect(localActionResult).toEqual(expectedLocalResult);
     });
