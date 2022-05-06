@@ -1,7 +1,7 @@
 import localFishesReducer from "./localFishesReducer";
 
 describe("Given a localFishesReducer", () => {
-  const fishes = [
+  const localFishes = [
     {
       id: 1,
       "file-name": "boris_fish",
@@ -15,12 +15,12 @@ describe("Given a localFishesReducer", () => {
     test("Then it should return a copy of the given fishes", () => {
       const givenAction = {
         type: "load-local-fishes",
-        fishes,
+        localFishes,
       };
 
-      const expectedLocalAction = localFishesReducer(fishes, givenAction);
+      const expectedLocalAction = localFishesReducer(localFishes, givenAction);
 
-      expect(fishes).toEqual(expectedLocalAction);
+      expect(localFishes).toEqual(expectedLocalAction);
     });
   });
 
@@ -28,7 +28,7 @@ describe("Given a localFishesReducer", () => {
     test("Then it should return a copy of the given fishes", () => {
       const givenAction = {
         type: "",
-        fishes,
+        localFishes,
       };
       const expectedFishes = [
         {
@@ -40,7 +40,7 @@ describe("Given a localFishesReducer", () => {
           "file-name": "nacho_lil_fish",
         },
       ];
-      const expectedLocalAction = localFishesReducer(fishes, givenAction);
+      const expectedLocalAction = localFishesReducer(localFishes, givenAction);
 
       expect(expectedFishes).toEqual(expectedLocalAction);
     });
