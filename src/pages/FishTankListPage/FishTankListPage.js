@@ -1,8 +1,16 @@
+import { useContext, useEffect } from "react";
+import FishAquariumList from "../../components/FishAquariumList/FishAquariumList";
+import useAPI from "../../hooks/useAPI";
+import FishesDataContext from "../../store/context/FishesDataContext";
+
 const FishTankListPage = () => {
-  return (
-    <>
-      <p>Fish list</p>
-    </>
-  );
+  const { loadLocalFishes } = useAPI();
+  const { localFishes } = useContext(FishesDataContext);
+
+  useEffect(() => {
+    loadLocalFishes();
+  }, [loadLocalFishes]);
+
+  return <FishAquariumList fishes={localFishes} />;
 };
 export default FishTankListPage;
