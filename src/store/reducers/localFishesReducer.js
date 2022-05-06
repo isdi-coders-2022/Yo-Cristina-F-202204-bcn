@@ -4,7 +4,7 @@ const localFishesReducer = (localFishes, action) => {
   let newLocalFishes;
 
   if (action.type === loadLocalFishesActionType) {
-    newLocalFishes = [...action.fishes];
+    newLocalFishes = [...action.localFishes];
     return newLocalFishes;
   }
   newLocalFishes = [...localFishes];
