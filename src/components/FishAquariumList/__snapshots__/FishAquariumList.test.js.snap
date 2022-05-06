@@ -1,0 +1,162 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Given a FishAquariumList component When its rendered with 2 fishes Then it should always match this snapshot 1`] = `
+<ul
+  className="sc-dkzDqf iqVbNA"
+>
+  <li
+    className="fish"
+  >
+    <div
+      className="sc-bczRLJ buRSCg"
+    >
+      <ul
+        className="fishContainer"
+      >
+        <li
+          className="fishContainer__header"
+        >
+          <h3
+            className="fishContainer__name"
+          >
+            Bitterling
+          </h3>
+          <div
+            className="fish-icon__container"
+          >
+            <img
+              alt="bitterling image"
+              className="fish-icon__image"
+              src="https://acnhapi.com/v1/icons/fish/1"
+            />
+          </div>
+        </li>
+        <li>
+          <div
+            className="fishContainer__monthDisplay"
+          >
+            <i
+              className="fas fa-calendar-alt"
+            />
+            <span>
+               
+              11-3
+            </span>
+          </div>
+          <div
+            className="fishContainer__hourDisplay"
+          >
+            <i
+              className="fas fa-clock"
+            />
+            <span>
+              All day
+            </span>
+          </div>
+        </li>
+        <li>
+          <div
+            className="fishContainer__locationDisplay"
+          >
+            <span>
+              River
+            </span>
+          </div>
+          <div
+            className="fishContainer__rarityDisplay"
+          >
+            <span>
+              Common
+            </span>
+          </div>
+        </li>
+        <li>
+          <button
+            className="sc-gsnTZi dnmYMh"
+            onClick={[Function]}
+          >
+            Catch it!
+          </button>
+        </li>
+      </ul>
+    </div>
+  </li>
+  <li
+    className="fish"
+  >
+    <div
+      className="sc-bczRLJ buRSCg"
+    >
+      <ul
+        className="fishContainer"
+      >
+        <li
+          className="fishContainer__header"
+        >
+          <h3
+            className="fishContainer__name"
+          >
+            Pale chub
+          </h3>
+          <div
+            className="fish-icon__container"
+          >
+            <img
+              alt="pale chub image"
+              className="fish-icon__image"
+              src="https://acnhapi.com/v1/icons/fish/2"
+            />
+          </div>
+        </li>
+        <li>
+          <div
+            className="fishContainer__monthDisplay"
+          >
+            <i
+              className="fas fa-calendar-alt"
+            />
+            <span>
+               
+              All year
+            </span>
+          </div>
+          <div
+            className="fishContainer__hourDisplay"
+          >
+            <i
+              className="fas fa-clock"
+            />
+            <span>
+              9am - 4pm
+            </span>
+          </div>
+        </li>
+        <li>
+          <div
+            className="fishContainer__locationDisplay"
+          >
+            <span>
+              River
+            </span>
+          </div>
+          <div
+            className="fishContainer__rarityDisplay"
+          >
+            <span>
+              Common
+            </span>
+          </div>
+        </li>
+        <li>
+          <button
+            className="sc-gsnTZi dnmYMh"
+            onClick={[Function]}
+          >
+            Catch it!
+          </button>
+        </li>
+      </ul>
+    </div>
+  </li>
+</ul>
+`;

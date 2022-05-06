@@ -11,6 +11,7 @@ describe("Given the Button component", () => {
       expect(theButton).toBeInTheDocument();
     });
   });
+
   describe("When invoked with the text 'text`", () => {
     test("Then it should render the text 'text on the rendered Button", () => {
       const expectedButtonText = "text";
@@ -22,6 +23,7 @@ describe("Given the Button component", () => {
       expect(ButtonText).toBeInTheDocument();
     });
   });
+
   describe("When invoked with primary props", () => {
     test("Then it should render a dark blue background", () => {
       render(<Button styleType={"primary"} />);
@@ -33,6 +35,7 @@ describe("Given the Button component", () => {
     `);
     });
   });
+
   test("Then it should render a light blue background", () => {
     render(<Button styleType={"secondary"} />);
 

@@ -1,10 +1,10 @@
-import { render, screen } from "@testing-library/react";
 import FishesDataProvider from "../../store/context/FishesDataProvider";
 import FishAquariumList from "./FishAquariumList";
+import TestRenderer from "react-test-renderer";
 
 describe("Given a FishAquariumList component", () => {
-  describe("When its invoked and receives a an array with 2 fishes", () => {
-    test("Then it should render 2 Fish components with a heading", () => {
+  describe("When its rendered with 2 fishes", () => {
+    test("Then it should always match this snapshot", () => {
       const fishes = [
         {
           id: 1,
@@ -92,14 +92,14 @@ describe("Given a FishAquariumList component", () => {
           icon_uri: "https://acnhapi.com/v1/icons/fish/2",
         },
       ];
-      render(
+
+      const renderedFishComponent = TestRenderer.create(
         <FishesDataProvider>
           <FishAquariumList fishes={fishes} />
         </FishesDataProvider>
       );
-      const expectedFishContainers = screen.getAllByRole("list");
 
-      expect(expectedFishContainers.length).toBe(3);
+      expect(renderedFishComponent).toMatchSnapshot();
     });
   });
 });
