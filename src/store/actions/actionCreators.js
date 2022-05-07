@@ -14,13 +14,13 @@ export const loadLocalFishesActionCreator = (localFishes) => ({
   type: loadLocalFishesActionType,
   localFishes,
 });
-export const addLocalFishesActionCreator = (localFishes) => ({
+export const addLocalFishesActionCreator = (fish) => ({
   type: addLocalFishesActionType,
-  localFishes,
+  fish,
 });
-export const deleteLocalFishesActionCreator = (localFishes) => ({
+export const deleteLocalFishesActionCreator = (id) => ({
   type: deleteLocalFishesActionType,
-  localFishes,
+  id,
 });
 export const modifyLocalFishesActionCreator = (localFishes) => ({
   type: modifyLocalFishesActionType,

@@ -73,14 +73,7 @@ exports[`Given a FishAquariumList component When its rendered with 2 fishes Then
         </li>
         <li
           className="fish-container__button"
-        >
-          <button
-            className="sc-gsnTZi bczvDY"
-            onClick={[Function]}
-          >
-            Catch it!
-          </button>
-        </li>
+        />
       </ul>
     </div>
   </li>
@@ -153,14 +146,7 @@ exports[`Given a FishAquariumList component When its rendered with 2 fishes Then
         </li>
         <li
           className="fish-container__button"
-        >
-          <button
-            className="sc-gsnTZi bczvDY"
-            onClick={[Function]}
-          >
-            Catch it!
-          </button>
-        </li>
+        />
       </ul>
     </div>
   </li>

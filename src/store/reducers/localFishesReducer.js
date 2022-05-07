@@ -1,13 +1,29 @@
-import { loadLocalFishesActionType } from "../actions/actionTypes";
+import {
+  loadLocalFishesActionType,
+  addLocalFishesActionType,
+  deleteLocalFishesActionType,
+} from "../actions/actionTypes";
 
 const localFishesReducer = (localFishes, action) => {
   let newLocalFishes;
 
-  if (action.type === loadLocalFishesActionType) {
-    newLocalFishes = [...action.localFishes];
-    return newLocalFishes;
+  switch (action.type) {
+    case loadLocalFishesActionType:
+      newLocalFishes = [...action.localFishes];
+      break;
+
+    case addLocalFishesActionType:
+      newLocalFishes = [...localFishes, action.localFishes];
+      break;
+
+    case deleteLocalFishesActionType:
+      newLocalFishes = localFishes.filter((fish) => fish.id !== action.id);
+      break;
+
+    default:
+      newLocalFishes = [...localFishes];
+      break;
   }
-  newLocalFishes = [...localFishes];
   return newLocalFishes;
 };
 

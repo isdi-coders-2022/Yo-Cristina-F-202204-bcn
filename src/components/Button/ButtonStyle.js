@@ -26,6 +26,7 @@ export const ButtonStyle = styled.button`
       ? `
       background: ${theme.blueDark};
       color: ${theme.white};
+      border: 3px solid ${theme.blueDark};
     `
       : ""}
 
@@ -34,8 +35,7 @@ export const ButtonStyle = styled.button`
       ? `
       background: rgba(${theme.bluelightRgb},.25);
       color: ${theme.blueDark};
-      border: 3.5px solid ${theme.blueDark};
-      border-color: ${theme.blueDark}
+      border: 3px solid ${theme.blueDark};
     `
       : ""}
 `;

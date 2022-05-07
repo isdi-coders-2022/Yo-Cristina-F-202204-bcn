@@ -2,6 +2,7 @@ import { endpoint } from "../paths/endpoint";
 import { useCallback, useContext } from "react";
 import FishesDataContext from "../store/context/FishesDataContext";
 import {
+  addLocalFishesActionCreator,
   loadFishesActionCreator,
   loadLocalFishesActionCreator,
 } from "../store/actions/actionCreators";
@@ -26,16 +27,28 @@ const useAPI = () => {
   }, [localDispatch, localUrlAPI]);
 
   const addToFishTank = async (fish) => {
-    await fetch(`${localUrlAPI}${endpoint.fish}`, {
+    const response = await fetch(`${localUrlAPI}${endpoint.fish}`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(fish),
     });
+
+    const newFish = response.json();
+    localDispatch(addLocalFishesActionCreator(newFish));
   };
 
-  return { loadFishes, loadLocalFishes, addToFishTank };
+  const deleteFishFromFishTank = async (id) => {
+    const response = await fetch(`${localUrlAPI}${endpoint.fish}/${id}`, {
+      method: "DELETE",
+    });
+    if (response.ok) {
+      localDispatch(deleteFishFromFishTank(id));
+    }
+  };
+
+  return { loadFishes, loadLocalFishes, addToFishTank, deleteFishFromFishTank };
 };
 
 export default useAPI;
