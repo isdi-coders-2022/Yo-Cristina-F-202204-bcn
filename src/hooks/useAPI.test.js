@@ -1,6 +1,7 @@
 import { renderHook, waitFor } from "@testing-library/react";
 import FishesDataProvider from "../store/context/FishesDataProvider";
 import useAPI from "./useAPI";
+import TestRenderer from "react-test-renderer";
 
 describe("Given the custom Hook useAPI", () => {
   describe("When loadFishes function it's called", () => {
@@ -100,6 +101,20 @@ describe("Given the custom Hook useAPI", () => {
       const { result } = renderHook(() => useAPI(), { wrapper });
       const fishes = await waitFor(() => result.current.loadFishes());
       expect(fishes).toEqual(expectFishes);
+    });
+  });
+});
+
+describe("Given useApi Hook", () => {
+  describe("When rendered", () => {
+    test("Then it should always match this snapshot", () => {
+      const renderedUseApi = TestRenderer.create(
+        <FishesDataProvider>
+          <useAPI />
+        </FishesDataProvider>
+      );
+
+      expect(renderedUseApi).toMatchSnapshot();
     });
   });
 });
