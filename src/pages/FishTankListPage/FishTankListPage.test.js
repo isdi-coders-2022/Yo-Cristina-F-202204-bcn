@@ -1,8 +1,6 @@
 import FishesDataProvider from "../../store/context/FishesDataProvider";
 import FishTankListPage from "./FishTankListPage";
 import TestRenderer from "react-test-renderer";
-// import { render } from "react-dom";
-// import { screen } from "@testing-library/react";
 
 describe("Given the FishTankListPage component", () => {
   describe("When rendered with 2 fishes", () => {
