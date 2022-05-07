@@ -17,6 +17,10 @@ export const ButtonStyle = styled.button`
   font-family: "Nunito", sans-serif;
   cursor: pointer;
 
+  :active {
+    transform: translateY(2px);
+  }
+
   ${(props) =>
     props.styleType === "primary"
       ? `

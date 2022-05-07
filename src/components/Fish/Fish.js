@@ -11,9 +11,9 @@ const Fish = ({ fish, toDetail }) => {
 
   return (
     <FishStyle>
-      <ul className="fishContainer" onClick={toDetail}>
-        <li className="fishContainer__header">
-          <h3 className="fishContainer__name">
+      <ul className="fish-container" onClick={toDetail}>
+        <li className="fish-container__header">
+          <h3 className="fish-container__name">
             {capitalizeName(fish.name["name-EUen"])}
           </h3>
           <div className="fish-icon__container">
@@ -21,20 +21,21 @@ const Fish = ({ fish, toDetail }) => {
               className="fish-icon__image"
               src={fish.icon_uri}
               alt={fish.name["name-EUen"] + " image"}
+              width="auto"
+              height="80px"
             />
           </div>
         </li>
         <li>
-          <div className="fishContainer__monthDisplay">
+          <div className="fish-container__monthDisplay">
             <i className="fas fa-calendar-alt"></i>
             <span>
-              {" "}
               {fish.availability.isAllYear
                 ? "All year"
                 : fish.availability["month-northern"]}
             </span>
           </div>
-          <div className="fishContainer__hourDisplay">
+          <div className="fish-container__hourDisplay">
             <i className="fas fa-clock"></i>
             <span>
               {fish.availability.isAllDay ? "All day" : fish.availability.time}
@@ -42,14 +43,14 @@ const Fish = ({ fish, toDetail }) => {
           </div>
         </li>
         <li>
-          <div className="fishContainer__locationDisplay">
+          <div className="fish-container__locationDisplay">
             <span>{fish.availability.location}</span>
           </div>
-          <div className="fishContainer__rarityDisplay">
+          <div className="fish-container__rarityDisplay">
             <span>{fish.availability.rarity}</span>
           </div>
         </li>
-        <li>
+        <li className="fish-container__button">
           <Button text="Catch it!" action={() => addToFishTank(fish)} />
         </li>
       </ul>

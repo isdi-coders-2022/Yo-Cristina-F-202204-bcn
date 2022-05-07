@@ -6,7 +6,7 @@ const HeaderStyle = styled.ul`
   background: ${theme.blueDark};
   font-family: inherit;
   height: 88px;
-  color: ${theme.white};
+  color: ${theme.brownDarkTextColor};
   list-style-type: none;
   display: flex;
   justify-content: space-between;
@@ -24,10 +24,10 @@ const HeaderStyle = styled.ul`
     font-weight: 800;
   }
   h1 {
-    font-size: 24px;
+    font-size: 1.8em;
   }
   h2 {
-    font-size: 16px;
+    font-size: 1.2em;
   }
 `;
 

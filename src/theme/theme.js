@@ -11,6 +11,8 @@ const theme = {
   brownMedium: "#DBBE9D",
   brownDark: "#583E3B",
   brownDarkRgb: "88,62,59",
+  brownDarkTextColor: "#3F2B29",
+  greenDarkTextColor: "#253925",
 };
 
 export default theme;
