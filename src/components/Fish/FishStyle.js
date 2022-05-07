@@ -8,9 +8,12 @@ const FishStyle = styled.div`
   border-radius: 10px;
   align-content: center;
 
-  .fishContainer__header {
+  .fish-container__header {
     align-items: center;
+    position: relative;
+    margin-bottom: 20px;
   }
+
   li {
     gap: 10px;
   }
@@ -27,7 +30,9 @@ const FishStyle = styled.div`
     justify-content: center;
     border-radius: 50px;
     align-items: center;
-    flex: 0 0 90px;
+    position: absolute;
+    right: 0;
+    top: -60px;
   }
 
   .fish-icon__image {
@@ -35,7 +40,7 @@ const FishStyle = styled.div`
     height: 70px;
   }
 
-  .fishContainer {
+  .fish-container {
     width: inherit;
     margin: 0;
     display: flex;
@@ -53,26 +58,28 @@ const FishStyle = styled.div`
     margin-bottom: 10px;
   }
 
-  h3 {
-    font-size: 36px;
+  .fish-container__name {
+    font-size: 2em;
+    margin: 0;
     color: #583e3b;
     font-weight: 800;
+    margin: 0;
+    width: 70%;
   }
   .fish {
     margin-bottom: 20px;
   }
 
-  .fishContainer__monthDisplay,
-  .fishContainer__hourDisplay,
-  .fishContainer__locationDisplay,
-  .fishContainer__rarityDisplay {
+  .fish-container__monthDisplay,
+  .fish-container__hourDisplay,
+  .fish-container__locationDisplay,
+  .fish-container__rarityDisplay {
     padding: 5px;
     width: 100%;
     border-radius: 5px;
     text-align: center;
     display: flex;
     align-items: center;
-    height: 30px;
     font-weight: 700;
     i {
       flex-grow: 1;
@@ -82,19 +89,23 @@ const FishStyle = styled.div`
     }
   }
 
-  .fishContainer__monthDisplay,
-  .fishContainer__hourDisplay {
-    background: #8ebfa3;
-    color: #faf4ed;
+  .fish-container__monthDisplay,
+  .fish-container__hourDisplay {
+    background: ${theme.greenDark};
+    color: ${theme.greenDarkTextColor};
     font-size: 1.3em;
   }
 
-  .fishContainer__locationDisplay,
-  .fishContainer__rarityDisplay {
-    background: #e6d0be;
-    color: #583e3b;
+  .fish-container__locationDisplay,
+  .fish-container__rarityDisplay {
+    background: ${theme.brownLight};
+    color: ${theme.brownDarkTextColor};
     font-size: 1em;
     text-transform: uppercase;
+  }
+
+  .fish-container__button {
+    margin-top: 10px;
   }
 `;
 

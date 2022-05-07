@@ -14,18 +14,18 @@ const MobileNavbarStyle = styled.nav`
   }
 
   .mobile-navbar__image--home {
-    width: 25px;
+    width: 20px;
   }
   .mobile-navbar__image--fish {
-    width: 35px;
+    width: 30px;
   }
 
   .mobile-navbar__tittle {
     margin-bottom: 0;
     margin-top: 10px;
     color: ${theme.brownDark};
-    font-size: 0.7em;
-    font-weight: 700;
+    font-size: 0.8em;
+    font-weight: 800;
     text-transform: uppercase;
   }
 `;
@@ -39,8 +39,9 @@ const Navigation = () => {
             className="mobile-navbar__image--home"
             src="images/home.png"
             alt="Navigation icon to Fish Aquarium"
+            width="20px"
           />
-          <h6 className="mobile-navbar__tittle">Aquarium</h6>
+          <h4 className="mobile-navbar__tittle">Aquarium</h4>
         </div>
       </NavLink>
 
@@ -50,8 +51,9 @@ const Navigation = () => {
             className="mobile-navbar__image--fish"
             src="images/favicon.png"
             alt="Navigation icon to Fish tank"
+            width="30px"
           />
-          <h6 className="mobile-navbar__tittle">Fish Tank</h6>
+          <h4 className="mobile-navbar__tittle">Fish Tank</h4>
         </div>
       </NavLink>
     </MobileNavbarStyle>

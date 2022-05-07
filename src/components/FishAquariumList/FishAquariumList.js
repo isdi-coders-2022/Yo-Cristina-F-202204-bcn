@@ -4,8 +4,8 @@ import styled from "styled-components";
 const FishListStyle = styled.ul`
   display: flex;
   flex-direction: column;
-  gap: 40px;
-  margin-top: 120px;
+  gap: 70px;
+  margin-top: 150px;
   margin-bottom: 30px;
 `;
 
