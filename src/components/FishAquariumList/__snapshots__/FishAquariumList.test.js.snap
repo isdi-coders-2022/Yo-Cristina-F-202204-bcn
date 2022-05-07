@@ -8,7 +8,7 @@ exports[`Given a FishAquariumList component When its rendered with 2 fishes Then
     className="fish"
   >
     <div
-      className="sc-bczRLJ gtrNoR"
+      className="sc-bczRLJ cmDTID"
     >
       <ul
         className="fish-container"
@@ -41,7 +41,6 @@ exports[`Given a FishAquariumList component When its rendered with 2 fishes Then
               className="fas fa-calendar-alt"
             />
             <span>
-               
               11-3
             </span>
           </div>
@@ -72,9 +71,11 @@ exports[`Given a FishAquariumList component When its rendered with 2 fishes Then
             </span>
           </div>
         </li>
-        <li>
+        <li
+          className="fish-container__button"
+        >
           <button
-            className="sc-gsnTZi dnmYMh"
+            className="sc-gsnTZi bczvDY"
             onClick={[Function]}
           >
             Catch it!
@@ -87,7 +88,7 @@ exports[`Given a FishAquariumList component When its rendered with 2 fishes Then
     className="fish"
   >
     <div
-      className="sc-bczRLJ gtrNoR"
+      className="sc-bczRLJ cmDTID"
     >
       <ul
         className="fish-container"
@@ -120,7 +121,6 @@ exports[`Given a FishAquariumList component When its rendered with 2 fishes Then
               className="fas fa-calendar-alt"
             />
             <span>
-               
               All year
             </span>
           </div>
@@ -151,9 +151,11 @@ exports[`Given a FishAquariumList component When its rendered with 2 fishes Then
             </span>
           </div>
         </li>
-        <li>
+        <li
+          className="fish-container__button"
+        >
           <button
-            className="sc-gsnTZi dnmYMh"
+            className="sc-gsnTZi bczvDY"
             onClick={[Function]}
           >
             Catch it!
