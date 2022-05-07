@@ -1,12 +1,11 @@
-import { renderHook, waitFor } from "@testing-library/react";
-import FishesDataProvider from "../store/context/FishesDataProvider";
-import useAPI from "./useAPI";
+import FishesDataProvider from "../../store/context/FishesDataProvider";
+import FishTankListPage from "./FishTankListPage";
 import TestRenderer from "react-test-renderer";
 
-describe("Given the custom Hook useAPI", () => {
-  describe("When loadFishes function it's called", () => {
-    test("Then it should return an array of two fishes", async () => {
-      const expectFishes = [
+describe("Given the FishTankListPage component", () => {
+  describe("When rendered with 2 fishes", () => {
+    test("Then it should always match this snapshot", () => {
+      const localFishes = [
         {
           id: 1,
           "file-name": "bitterling",
@@ -94,27 +93,13 @@ describe("Given the custom Hook useAPI", () => {
         },
       ];
 
-      const wrapper = ({ children }) => (
-        <FishesDataProvider>{children}</FishesDataProvider>
-      );
-
-      const { result } = renderHook(() => useAPI(), { wrapper });
-      const fishes = await waitFor(() => result.current.loadFishes());
-      expect(fishes).toEqual(expectFishes);
-    });
-  });
-});
-
-describe("Given useApi Hook", () => {
-  describe("When rendered", () => {
-    test("Then it should always match this snapshot", () => {
-      const renderedUseApi = TestRenderer.create(
+      const renderedFishComponent = TestRenderer.create(
         <FishesDataProvider>
-          <useAPI />
+          <FishTankListPage fishes={localFishes} />
         </FishesDataProvider>
       );
 
-      expect(renderedUseApi).toMatchSnapshot();
+      expect(renderedFishComponent).toMatchSnapshot();
     });
   });
 });
