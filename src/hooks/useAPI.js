@@ -38,6 +38,7 @@ const useAPI = () => {
     if (response.ok) {
       const fish = await response.json();
       localDispatch(addLocalFishesActionCreator(fish));
+      return fish;
     }
   };
 

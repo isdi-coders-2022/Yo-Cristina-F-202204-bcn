@@ -112,6 +112,65 @@ describe("Given the custom Hook useAPI", () => {
       expect(localFishes).toEqual(expectFishes);
     });
   });
+
+  describe("When addToFishTank is called with a fish", () => {
+    test("Then it should return the fish added", async () => {
+      const expectFish = [
+        {
+          id: 29,
+          "file-name": "golden_trout",
+          name: {
+            "name-USen": "golden trout",
+            "name-EUen": "golden trout",
+            "name-EUde": "Goldforelle",
+            "name-EUes": "trucha dorada",
+            "name-USes": "trucha dorada",
+            "name-EUfr": "truite dorée",
+            "name-USfr": "truite dorée",
+            "name-EUit": "trota dorata",
+            "name-EUnl": "goudforel",
+            "name-CNzh": "金鳟",
+            "name-TWzh": "金鱒",
+            "name-JPja": "ゴールデントラウト",
+            "name-KRko": "금송어",
+            "name-EUru": "золотая форель",
+          },
+          availability: {
+            "month-northern": "3-5 & 9-11",
+            "month-southern": "3-5 & 9-11",
+            time: "4pm - 9am",
+            isAllDay: false,
+            isAllYear: false,
+            location: "River (Clifftop)",
+            rarity: "Ultra-rare",
+            "month-array-northern": [3, 4, 5, 9, 10, 11],
+            "month-array-southern": [3, 4, 5, 9, 10, 11],
+            "time-array": [
+              16, 17, 18, 19, 20, 21, 22, 23, 0, 1, 2, 3, 4, 5, 6, 7, 8,
+            ],
+          },
+          shadow: "Medium (3)",
+          price: 15000,
+          "price-cj": 22500,
+          "catch-phrase":
+            "I caught a golden trout! But the real treasure? Friendship.",
+          "museum-phrase":
+            "The golden trout is a beautifully colored fish that can only live in very clean waters. They are difficult to come across since they are found only in high mountain streams. As a side note, I find it much easier to appreciate fish that aren't such prima donnas about everything.",
+          image_uri: "https://acnhapi.com/v1/images/fish/29",
+          icon_uri: "https://acnhapi.com/v1/icons/fish/29",
+        },
+      ];
+
+      const wrapper = ({ children }) => (
+        <FishesDataProvider>{children}</FishesDataProvider>
+      );
+      const { result } = renderHook(() => useAPI(), { wrapper });
+      const addToFishTank = await waitFor(() =>
+        result.current.addToFishTank(expectFish)
+      );
+      expect(addToFishTank).toEqual(expectFish);
+    });
+  });
 });
 
 describe("Given useApi Hook", () => {
