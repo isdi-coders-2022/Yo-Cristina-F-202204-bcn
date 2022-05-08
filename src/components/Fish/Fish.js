@@ -13,8 +13,8 @@ const Fish = ({ fish, toDetail }) => {
     return name.charAt(0).toUpperCase() + name.slice(1);
   };
 
-  const addFish = () => {
-    addToFishTank(fish);
+  const addFish = (newFish) => {
+    addToFishTank(newFish);
   };
 
   const deleteFish = (id) => {

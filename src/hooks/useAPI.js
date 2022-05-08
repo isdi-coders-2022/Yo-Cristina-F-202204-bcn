@@ -27,16 +27,16 @@ const useAPI = () => {
     return dataFishes;
   }, [localDispatch, localUrlAPI]);
 
-  const addToFishTank = async (fish) => {
+  const addToFishTank = async (newFish) => {
     const response = await fetch(`${localUrlAPI}${endpoint.fish}`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(fish),
+      body: JSON.stringify(newFish),
     });
     if (response.ok) {
-      await response.json();
+      const fish = await response.json();
       localDispatch(addLocalFishesActionCreator(fish));
     }
   };
