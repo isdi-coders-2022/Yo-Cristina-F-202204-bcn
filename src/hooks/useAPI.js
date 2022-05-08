@@ -3,6 +3,7 @@ import { useCallback, useContext } from "react";
 import FishesDataContext from "../store/context/FishesDataContext";
 import {
   addLocalFishesActionCreator,
+  deleteLocalFishesActionCreator,
   loadFishesActionCreator,
   loadLocalFishesActionCreator,
 } from "../store/actions/actionCreators";
@@ -34,9 +35,10 @@ const useAPI = () => {
       },
       body: JSON.stringify(fish),
     });
-
-    const newFish = response.json();
-    localDispatch(addLocalFishesActionCreator(newFish));
+    if (response.ok) {
+      const fish = await response.json();
+      localDispatch(addLocalFishesActionCreator(fish));
+    }
   };
 
   const deleteFishFromFishTank = async (id) => {
@@ -44,7 +46,7 @@ const useAPI = () => {
       method: "DELETE",
     });
     if (response.ok) {
-      localDispatch(deleteFishFromFishTank(id));
+      localDispatch(deleteLocalFishesActionCreator(id));
     }
   };
 

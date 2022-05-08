@@ -5,20 +5,15 @@ import { aquariumPage } from "../../paths/pages";
 import FishesDataContext from "../../store/context/FishesDataContext";
 
 const FishAquariumListPage = () => {
-  const { loadFishes, addToFishTank } = useAPI();
+  const { loadFishes } = useAPI();
   const { fishes, setPage } = useContext(FishesDataContext);
 
   useEffect(() => {
-    setPage(aquariumPage);
     loadFishes();
+    setPage(aquariumPage);
   }, [loadFishes, setPage]);
 
-  const addFish = (fish) => {
-    addToFishTank(fish);
-    loadFishes();
-  };
-
-  return <FishAquariumList fishes={fishes} action={addFish} />;
+  return <FishAquariumList fishes={fishes} />;
 };
 
 export default FishAquariumListPage;

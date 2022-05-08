@@ -13,7 +13,7 @@ const localFishesReducer = (localFishes, action) => {
       break;
 
     case addLocalFishesActionType:
-      newLocalFishes = [...localFishes, action.localFishes];
+      newLocalFishes = [...localFishes, action.fish];
       break;
 
     case deleteLocalFishesActionType:

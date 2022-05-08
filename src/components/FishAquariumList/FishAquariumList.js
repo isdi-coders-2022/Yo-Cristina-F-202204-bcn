@@ -9,13 +9,13 @@ const FishListStyle = styled.ul`
   margin-bottom: 30px;
 `;
 
-const FishAquariumList = ({ fishes, action }) => {
+const FishAquariumList = ({ fishes }) => {
   return (
     <>
       <FishListStyle>
         {fishes.slice(0, 9).map((fish) => (
           <li className="fish" key={fish.id}>
-            <Fish fish={fish} action={action} />
+            <Fish fish={fish} />
           </li>
         ))}
       </FishListStyle>

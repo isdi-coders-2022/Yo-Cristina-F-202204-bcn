@@ -3,12 +3,22 @@ import Button from "../Button/Button";
 import { useContext } from "react";
 import FishesDataContext from "../../store/context/FishesDataContext";
 import { aquariumPage, fishTankPage } from "../../paths/pages";
+import useAPI from "../../hooks/useAPI";
 
-const Fish = ({ fish, toDetail, action }) => {
+const Fish = ({ fish, toDetail }) => {
   const { page } = useContext(FishesDataContext);
+  const { addToFishTank, deleteFishFromFishTank } = useAPI();
 
   const capitalizeName = (name) => {
     return name.charAt(0).toUpperCase() + name.slice(1);
+  };
+
+  const addFish = (fish) => {
+    addToFishTank(fish);
+  };
+
+  const deleteFish = (id) => {
+    deleteFishFromFishTank(id);
   };
 
   return (
@@ -57,7 +67,7 @@ const Fish = ({ fish, toDetail, action }) => {
             <Button
               text="Catch it!"
               styleType="primary"
-              action={() => action(fish)}
+              action={() => addFish(fish)}
             />
           ) : (
             ""
@@ -66,7 +76,7 @@ const Fish = ({ fish, toDetail, action }) => {
             <Button
               text="Release"
               styleType="secondary"
-              action={() => action(fish.id)}
+              action={() => deleteFish(fish.id)}
             />
           ) : (
             ""
