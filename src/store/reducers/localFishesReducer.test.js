@@ -46,3 +46,35 @@ describe("Given a localFishesReducer", () => {
     });
   });
 });
+
+describe("Given the localFishesReducer", () => {
+  describe("When invoked receiving two fishes with the type property 'add-local-fishes'", () => {
+    test("Then it should return an array of the three fishes plus one", () => {
+      const expectedFishArrayLength = 4;
+
+      const localFishes = [
+        {
+          id: 3,
+          "file-name": "boris_fish",
+        },
+        {
+          id: 1,
+          "file-name": "nacho_lil_fish",
+        },
+        {
+          id: 2,
+          "fie-name": "mariam-lil-fish",
+        },
+      ];
+
+      const givenAction = {
+        type: "add-local-fishes",
+        localFishes,
+      };
+
+      const expectedLocalAction = localFishesReducer(localFishes, givenAction);
+
+      expect(expectedLocalAction).toHaveLength(expectedFishArrayLength);
+    });
+  });
+});
