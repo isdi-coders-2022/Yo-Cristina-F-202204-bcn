@@ -36,7 +36,7 @@ const useAPI = () => {
       body: JSON.stringify(fish),
     });
     if (response.ok) {
-      const fish = await response.json();
+      await response.json();
       localDispatch(addLocalFishesActionCreator(fish));
     }
   };
