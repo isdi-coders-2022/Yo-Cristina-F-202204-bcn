@@ -1,5 +1,4 @@
-import { useState } from "react";
-import { useReducer } from "react";
+import { useState, useReducer } from "react";
 import fishesReducer from "../reducers/fishesReducer";
 import localFishesReducer from "../reducers/localFishesReducer";
 import FishesDataContext from "./FishesDataContext";
