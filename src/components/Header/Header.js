@@ -1,4 +1,7 @@
+import { useContext } from "react";
 import styled from "styled-components";
+import { aquariumPage, fishTankPage } from "../../paths/pages";
+import FishesDataContext from "../../store/context/FishesDataContext";
 import theme from "../../theme/theme";
 
 const HeaderStyle = styled.ul`
@@ -32,13 +35,16 @@ const HeaderStyle = styled.ul`
 `;
 
 const Header = () => {
+  const { page } = useContext(FishesDataContext);
+
   return (
     <HeaderStyle>
       <li>
         <h1>Fishypedia</h1>
       </li>
       <li>
-        <h2>AQUARIUM</h2>
+        {page === aquariumPage ? <h2>AQUARIUM</h2> : ""}
+        {page === fishTankPage ? <h2>FISH TANK</h2> : ""}
       </li>
     </HeaderStyle>
   );
