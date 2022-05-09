@@ -1,3 +1,0 @@
-const DetailFishPage = () => {
-  return <DetailFishPage />;
-};
